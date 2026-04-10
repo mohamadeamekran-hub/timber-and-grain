@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bois Cr&eacute;ations - Handcrafted wooden goods from Tangier, Morocco. Shop artisan clocks, jewelry, pens, and home decor. All prices in MAD.">
+  <title>Bois Cr&eacute;ations | Handcrafted Wooden Goods</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    Free shipping on all orders over 1,000.00 MAD within Morocco &mdash; <a href="#products">Shop Now</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Bois <span>Cr&eacute;ations</span></a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-icons">
+        <a href="#" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </a>
+        <a href="#" class="cart-icon" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" style="display:none;">0</span>
+        </a>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Open menu" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="toggleMobileMenu()" aria-label="Close menu">&times;</button>
+    <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+    <a href="#products" onclick="toggleMobileMenu()">Shop</a>
+    <a href="#about" onclick="toggleMobileMenu()">About</a>
+    <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
+    <a href="privacy-policy.html" onclick="toggleMobileMenu()">Privacy Policy</a>
+    <a href="terms-of-service.html" onclick="toggleMobileMenu()">Terms of Service</a>
+    <a href="refund-policy.html" onclick="toggleMobileMenu()">Refund Policy</a>
+  </div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" onclick="closeCart()" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <p>Your cart is empty</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">0.00 MAD</span>
+      </div>
+      <p class="cart-shipping-note">Shipping calculated at checkout. Free over 1,000.00 MAD.</p>
+      <a href="checkout.html"><button class="cart-checkout-btn" id="cartCheckoutBtn">Proceed to Checkout</button></a>
+      <button class="cart-continue" onclick="closeCart()">Continue Shopping</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">Handcrafted in Tangier</span>
+      <h1>Artisan Wooden Goods for Everyday Living</h1>
+      <p>Each piece is individually handcrafted from sustainably sourced hardwoods. Unique designs that bring natural warmth to your home and life.</p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn btn-primary">Shop Collection</a>
+        <a href="#about" class="btn btn-outline">Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>SSL Secure Checkout</span>
+      </div>
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <span>Free Shipping Over 1,000 MAD</span>
+      </div>
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/><polyline points="21 3 21 8 16 8"/></svg>
+        <span>30-Day Returns</span>
+      </div>
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span>Handmade Quality</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <h2 class="section-title">Shop by Category</h2>
+      <p class="section-subtitle">Explore our handcrafted collections</p>
+      <div class="categories-grid">
+        <a href="#products" class="category-card" style="background: linear-gradient(145deg, #d4c5b5, #c9b8a5);">
+          <div class="category-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#5a4535" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Wall Clocks</h3>
+          <p>Solid oak timepieces</p>
+        </a>
+        <a href="#products" class="category-card" style="background: linear-gradient(145deg, #e0d2c4, #d4c4b3);">
+          <div class="category-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#5a4535" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Jewelry</h3>
+          <p>Wooden earrings &amp; more</p>
+        </a>
+        <a href="#products" class="category-card" style="background: linear-gradient(145deg, #cdbfb0, #c0b0a0);">
+          <div class="category-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#5a4535" stroke-width="1.5"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+          </div>
+          <h3>Writing Pens</h3>
+          <p>Handturned elegance</p>
+        </a>
+        <a href="#products" class="category-card" style="background: linear-gradient(145deg, #d8cab9, #ccbdab);">
+          <div class="category-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#5a4535" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Home Decor</h3>
+          <p>Natural accents</p>
+        </a>
+        <a href="#products" class="category-card" style="background: linear-gradient(145deg, #ddd0c3, #d1c2b3);">
+          <div class="category-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#5a4535" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3>Accessories</h3>
+          <p>Unique wooden pieces</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products" id="products">
+    <div class="container">
+      <h2 class="section-title">Our Collection</h2>
+      <p class="section-subtitle">All prices displayed in MAD (Moroccan Dirham). No hidden fees at checkout.</p>
+      <div class="products-grid">
+
+        <!-- Product 1: Solid Oak Wall Clock - Classic -->
+        <div class="product-card">
+          <div class="product-image">
+            <div class="product-image-placeholder" style="background: linear-gradient(145deg, #b8a089, #9c8672);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="product-badge">Popular</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Wall Clocks</div>
+            <h3 class="product-name">Solid Oak Wall Clock &mdash; Classic</h3>
+            <p class="product-description">Handcrafted from sustainably sourced solid European oak. Silent quartz movement, Arabic numeral face, natural wax finish.</p>
+            <div class="product-images-mini">
+              <span class="mini-img active" style="background:linear-gradient(145deg,#b8a089,#9c8672);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#a89070,#8c7660);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#c8b098,#b09880);"></span>
+            </div>
+            <button class="product-toggle-details" onclick="toggleProductDetails(this)">View details</button>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="from">From </span>1,050.00 <span class="currency">MAD</span>
+              </div>
+              <button class="add-to-cart-btn" data-product-id="clock-classic" aria-label="Add to cart">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-details-expanded">
+            <p><span class="detail-label">Materials:</span> Solid European oak, food-safe natural beeswax finish</p>
+            <p><span class="detail-label">Dimensions:</span> Available in 25 cm or 30 cm diameter, 3 cm depth</p>
+            <p><span class="detail-label">Colors:</span> Natural oak (light), Aged oak (medium), Dark stain</p>
+            <p><span class="detail-label">Movement:</span> Silent sweep quartz mechanism (battery included)</p>
+            <p><span class="detail-label">Includes:</span> Wall-mount hardware, felt pads, care card</p>
+            <ul>
+              <li>Arabic numeral face design</li>
+              <li>Each clock shows unique natural grain patterns</li>
+              <li>Dimensions may vary +/- 3 mm (handmade)</li>
+            </ul>
+            <p><span class="detail-label">Care:</span> Dust with a dry soft cloth. Avoid direct sunlight and humidity. Do not use chemical cleaners. Re-apply wax annually for best appearance.</p>
+          </div>
+        </div>
+
+        <!-- Product 2: Solid Oak Wall Clock - Minimalist -->
+        <div class="product-card">
+          <div class="product-image">
+            <div class="product-image-placeholder" style="background: linear-gradient(145deg, #a8957e, #8f7d68);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="12" x2="15" y2="14"/></svg>
+            </div>
+            <span class="product-badge new">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Wall Clocks</div>
+            <h3 class="product-name">Solid Oak Wall Clock &mdash; Minimalist</h3>
+            <p class="product-description">Contemporary design with minimalist baton-style markers. Solid European oak, silent quartz mechanism, natural oil finish.</p>
+            <div class="product-images-mini">
+              <span class="mini-img active" style="background:linear-gradient(145deg,#a8957e,#8f7d68);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#988570,#806d5a);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#b8a58e,#a09078);"></span>
+            </div>
+            <button class="product-toggle-details" onclick="toggleProductDetails(this)">View details</button>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="from">From </span>1,120.00 <span class="currency">MAD</span>
+              </div>
+              <button class="add-to-cart-btn" data-product-id="clock-minimal" aria-label="Add to cart">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-details-expanded">
+            <p><span class="detail-label">Materials:</span> Solid European oak, natural linseed oil finish (matte)</p>
+            <p><span class="detail-label">Dimensions:</span> Available in 25 cm or 30 cm diameter, 2.5 cm depth</p>
+            <p><span class="detail-label">Colors:</span> Natural oak, Honey oak, Smoked oak</p>
+            <p><span class="detail-label">Movement:</span> Silent sweep quartz mechanism (battery included)</p>
+            <p><span class="detail-label">Includes:</span> Wall-mount hardware, felt pads, care card</p>
+            <ul>
+              <li>Clean baton-style hour markers for a modern look</li>
+              <li>Unique natural grain on every piece</li>
+              <li>Dimensions may vary +/- 3 mm (handmade)</li>
+            </ul>
+            <p><span class="detail-label">Care:</span> Wipe with a dry cloth. Keep away from direct sunlight. Re-oil every 12 months with linseed oil.</p>
+          </div>
+        </div>
+
+        <!-- Product 3: Wooden Perfume Atomizer -->
+        <div class="product-card">
+          <div class="product-image">
+            <div class="product-image-placeholder" style="background: linear-gradient(145deg, #c4a882, #ae9570);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"><rect x="8" y="8" width="8" height="14" rx="1"/><path d="M10 8V6a2 2 0 0 1 4 0v2"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="10" y1="3" x2="14" y2="3"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Accessories</div>
+            <h3 class="product-name">Wooden Perfume Atomizer</h3>
+            <p class="product-description">Elegant refillable perfume atomizer with a hand-turned walnut wood casing. Holds 10 ml, precision spray mechanism.</p>
+            <div class="product-images-mini">
+              <span class="mini-img active" style="background:linear-gradient(145deg,#c4a882,#ae9570);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#8b7260,#705a48);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#d4b892,#bea580);"></span>
+            </div>
+            <button class="product-toggle-details" onclick="toggleProductDetails(this)">View details</button>
+            <div class="product-footer">
+              <div class="product-price">
+                380.00 <span class="currency">MAD</span>
+              </div>
+              <button class="add-to-cart-btn" data-product-id="atomizer" aria-label="Add to cart">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-details-expanded">
+            <p><span class="detail-label">Materials:</span> Hand-turned walnut wood body, glass interior vial, aluminum spray mechanism</p>
+            <p><span class="detail-label">Dimensions:</span> 10 cm height x 2.5 cm diameter</p>
+            <p><span class="detail-label">Colors:</span> Natural walnut (dark), Light maple, Cherry</p>
+            <p><span class="detail-label">Capacity:</span> 10 ml refillable reservoir</p>
+            <p><span class="detail-label">Includes:</span> Atomizer, refill funnel, velvet travel pouch</p>
+            <ul>
+              <li>Twist-lock cap prevents leaks</li>
+              <li>Precision fine-mist spray nozzle</li>
+              <li>Ideal for travel (flight-safe under 100 ml)</li>
+            </ul>
+            <p><span class="detail-label">Care:</span> Wipe wood with a dry cloth. Rinse interior with warm water when switching fragrances. Avoid soaking the wood exterior.</p>
+          </div>
+        </div>
+
+        <!-- Product 4: Artisan Corkscrew -->
+        <div class="product-card">
+          <div class="product-image">
+            <div class="product-image-placeholder" style="background: linear-gradient(145deg, #9e8b76, #877562);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"><path d="M12 2v6"/><path d="M9 8h6"/><path d="M10 8l-1 14h6l-1-14"/><circle cx="12" cy="5" r="1"/></svg>
+            </div>
+            <span class="product-badge">Popular</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Accessories</div>
+            <h3 class="product-name">Artisan Cork &amp; Corkscrew</h3>
+            <p class="product-description">Hand-turned from pistachio wood with stainless steel worm spiral and lever mechanism. Ergonomic design, unique grain.</p>
+            <div class="product-images-mini">
+              <span class="mini-img active" style="background:linear-gradient(145deg,#9e8b76,#877562);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#b09880,#9a836d);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#8e7b66,#786552);"></span>
+            </div>
+            <button class="product-toggle-details" onclick="toggleProductDetails(this)">View details</button>
+            <div class="product-footer">
+              <div class="product-price">
+                420.00 <span class="currency">MAD</span>
+              </div>
+              <button class="add-to-cart-btn" data-product-id="corkscrew" aria-label="Add to cart">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-details-expanded">
+            <p><span class="detail-label">Materials:</span> Pistachio wood handle, 18/8 stainless steel spiral and lever</p>
+            <p><span class="detail-label">Dimensions:</span> 14 cm length, handle diameter 3.5 cm</p>
+            <p><span class="detail-label">Colors:</span> Natural pistachio (green tones), Olive wood (golden), Walnut (dark)</p>
+            <p><span class="detail-label">Includes:</span> Corkscrew, bottle stopper (matching wood), gift box</p>
+            <ul>
+              <li>Smooth lever mechanism for effortless cork removal</li>
+              <li>Ergonomic wide handle for comfortable grip</li>
+              <li>Each piece shows unique grain and color variations</li>
+            </ul>
+            <p><span class="detail-label">Care:</span> Hand wash the steel parts only. Dry immediately. Rub wood with mineral oil every few months. Do not submerge the wooden handle.</p>
+          </div>
+        </div>
+
+        <!-- Product 5: Wooden Drop Earrings -->
+        <div class="product-card">
+          <div class="product-image">
+            <div class="product-image-placeholder" style="background: linear-gradient(145deg, #d4b896, #c4a882);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"><path d="M12 2L8 8h8L12 2z"/><circle cx="12" cy="14" r="5"/><line x1="12" y1="8" x2="12" y2="9"/></svg>
+            </div>
+            <span class="product-badge new">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Jewelry</div>
+            <h3 class="product-name">Wooden Drop Earrings</h3>
+            <p class="product-description">Lightweight drop earrings hand-shaped from maple wood. Natural plant oil finish, hypoallergenic sterling silver hooks.</p>
+            <div class="product-images-mini">
+              <span class="mini-img active" style="background:linear-gradient(145deg,#d4b896,#c4a882);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#a08068,#8a6a52);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#e4c8a6,#d4b892);"></span>
+            </div>
+            <button class="product-toggle-details" onclick="toggleProductDetails(this)">View details</button>
+            <div class="product-footer">
+              <div class="product-price">
+                220.00 <span class="currency">MAD</span>
+              </div>
+              <button class="add-to-cart-btn" data-product-id="earrings" aria-label="Add to cart">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-details-expanded">
+            <p><span class="detail-label">Materials:</span> Sustainably harvested maple wood, 925 sterling silver hooks, plant-based oil finish</p>
+            <p><span class="detail-label">Dimensions:</span> Drop length 4 cm, pendant width 2 cm</p>
+            <p><span class="detail-label">Colors:</span> Natural maple (blonde), Walnut stain (brown), Cherry stain (reddish)</p>
+            <p><span class="detail-label">Weight:</span> Under 3 g per earring (ultra-lightweight)</p>
+            <p><span class="detail-label">Includes:</span> Pair of earrings in a recycled kraft gift box</p>
+            <ul>
+              <li>Hypoallergenic &mdash; safe for sensitive ears</li>
+              <li>Teardrop silhouette with natural grain detail</li>
+              <li>Plant-based finish is skin-safe and water-resistant</li>
+            </ul>
+            <p><span class="detail-label">Care:</span> Remove before swimming or showering. Store in the gift box or a dry pouch. Wipe gently with a soft cloth. Avoid prolonged water exposure.</p>
+          </div>
+        </div>
+
+        <!-- Product 6: Handturned Wooden Pen -->
+        <div class="product-card">
+          <div class="product-image">
+            <div class="product-image-placeholder" style="background: linear-gradient(145deg, #b09880, #9a836d);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Writing Pens</div>
+            <h3 class="product-name">Handturned Wooden Pen</h3>
+            <p class="product-description">Precision-turned ballpoint pen in walnut, cherry, or olive wood. German ink cartridge, chrome accents, display case included.</p>
+            <div class="product-images-mini">
+              <span class="mini-img active" style="background:linear-gradient(145deg,#b09880,#9a836d);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#8b6b55,#704f3a);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#c0a890,#aa927a);"></span>
+            </div>
+            <button class="product-toggle-details" onclick="toggleProductDetails(this)">View details</button>
+            <div class="product-footer">
+              <div class="product-price">
+                350.00 <span class="currency">MAD</span>
+              </div>
+              <button class="add-to-cart-btn" data-product-id="pen" aria-label="Add to cart">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-details-expanded">
+            <p><span class="detail-label">Materials:</span> Choice of walnut, cherry, or olive wood barrel. Chrome-plated brass accents</p>
+            <p><span class="detail-label">Dimensions:</span> 13.5 cm length, 1.2 cm barrel diameter</p>
+            <p><span class="detail-label">Colors:</span> Walnut (dark brown), Cherry (warm reddish), Olive (golden green)</p>
+            <p><span class="detail-label">Ink:</span> German-made smooth-flowing black ballpoint cartridge (standard refill, replaceable)</p>
+            <p><span class="detail-label">Includes:</span> Pen, spare cartridge, wooden display case</p>
+            <ul>
+              <li>Twist mechanism to extend/retract tip</li>
+              <li>Perfectly balanced weight for comfortable writing</li>
+              <li>Accepts standard Parker-style refills</li>
+            </ul>
+            <p><span class="detail-label">Care:</span> Wipe with a soft dry cloth. Apply a light coat of beeswax to maintain luster. Avoid dropping on hard surfaces.</p>
+          </div>
+        </div>
+
+        <!-- Product 7: Wooden Phone Stand -->
+        <div class="product-card">
+          <div class="product-image">
+            <div class="product-image-placeholder" style="background: linear-gradient(145deg, #bba48c, #a69078);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Home Decor</div>
+            <h3 class="product-name">Wooden Phone &amp; Tablet Stand</h3>
+            <p class="product-description">Solid beech wood desk stand with precision-cut groove. Portrait and landscape orientation, anti-slip base padding.</p>
+            <div class="product-images-mini">
+              <span class="mini-img active" style="background:linear-gradient(145deg,#bba48c,#a69078);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#9b8472,#857060);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#cbb49c,#b5a088);"></span>
+            </div>
+            <button class="product-toggle-details" onclick="toggleProductDetails(this)">View details</button>
+            <div class="product-footer">
+              <div class="product-price">
+                280.00 <span class="currency">MAD</span>
+              </div>
+              <button class="add-to-cart-btn" data-product-id="phone-stand" aria-label="Add to cart">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-details-expanded">
+            <p><span class="detail-label">Materials:</span> Solid European beech wood, silicone anti-slip padding, natural oil finish</p>
+            <p><span class="detail-label">Dimensions:</span> 12 cm width x 8 cm depth x 2 cm height, groove width 12 mm</p>
+            <p><span class="detail-label">Colors:</span> Natural beech (light), Walnut stain (dark), Black stain</p>
+            <p><span class="detail-label">Compatibility:</span> All phones and tablets up to 12 mm thick (with or without case)</p>
+            <p><span class="detail-label">Includes:</span> Stand, microfiber cleaning cloth</p>
+            <ul>
+              <li>Supports portrait and landscape orientation</li>
+              <li>Allows charging cable access from the base</li>
+              <li>Non-scratch silicone feet protect desk surfaces</li>
+            </ul>
+            <p><span class="detail-label">Care:</span> Wipe with a damp cloth and dry immediately. Re-oil with food-safe mineral oil every 6 months.</p>
+          </div>
+        </div>
+
+        <!-- Product 8: Oak Coaster Set -->
+        <div class="product-card">
+          <div class="product-image">
+            <div class="product-image-placeholder" style="background: linear-gradient(145deg, #c8b198, #b39e84);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Home Decor</div>
+            <h3 class="product-name">Oak Coaster Set (4 Pieces)</h3>
+            <p class="product-description">Four coasters cut from solid European oak with food-safe wax finish. Cork backing, matching oak holder included.</p>
+            <div class="product-images-mini">
+              <span class="mini-img active" style="background:linear-gradient(145deg,#c8b198,#b39e84);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#a89078,#928068);"></span>
+              <span class="mini-img" style="background:linear-gradient(145deg,#d8c1a8,#c2ae94);"></span>
+            </div>
+            <button class="product-toggle-details" onclick="toggleProductDetails(this)">View details</button>
+            <div class="product-footer">
+              <div class="product-price">
+                320.00 <span class="currency">MAD</span>
+              </div>
+              <button class="add-to-cart-btn" data-product-id="coasters" aria-label="Add to cart">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-details-expanded">
+            <p><span class="detail-label">Materials:</span> Solid European oak, food-safe natural beeswax finish, natural cork backing</p>
+            <p><span class="detail-label">Dimensions:</span> 10 cm diameter, 8 mm thickness per coaster</p>
+            <p><span class="detail-label">Colors:</span> Natural oak (light), Honey oak (medium), Dark oak (stained)</p>
+            <p><span class="detail-label">Set includes:</span> 4 coasters + matching oak holder/stand</p>
+            <ul>
+              <li>Cork backing prevents scratching on surfaces</li>
+              <li>Food-safe wax finish resists water rings</li>
+              <li>Each coaster has unique natural grain patterns</li>
+            </ul>
+            <p><span class="detail-label">Care:</span> Wipe spills immediately with a damp cloth. Dry thoroughly. Re-apply beeswax every 3-6 months. Do not soak or put in the dishwasher.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us / Features -->
+  <section class="features" id="about">
+    <div class="container">
+      <h2 class="section-title">Why Choose Bois Cr&eacute;ations</h2>
+      <p class="section-subtitle">Every piece tells a story of craftsmanship and sustainability</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Secure Payments</h3>
+          <p>All transactions are protected with SSL/HTTPS encryption and processed securely through Stripe. Your payment information is encrypted and never stored on our servers.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Made in Tangier</h3>
+          <p>Every piece is crafted in our Tangier workshop using sustainably sourced hardwoods. We support local artisans and responsible forestry practices.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Handcrafted with Care</h3>
+          <p>No mass production &mdash; each piece carries the mark of the maker and the character of natural wood. Every item is individually finished and inspected.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/><polyline points="21 3 21 8 16 8"/></svg>
+          </div>
+          <h3>30-Day Returns</h3>
+          <p>Not satisfied? Return any unused item within 30 days for a full refund. We stand behind the quality of our work and want you to be completely happy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Join Our Workshop</h2>
+      <p>Get 10% off your first order plus exclusive access to new releases and seasonal offers.</p>
+      <form class="newsletter-form" onsubmit="return handleNewsletter(event)">
+        <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-terms">
+        By subscribing, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.
+        Promotion: 10% discount code sent via email, valid for 30 days on orders over 200.00 MAD. Cannot be combined with other offers. One use per customer.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Bois <span>Cr&eacute;ations</span></a>
+        <p>Handcrafted wooden goods made with care in our Tangier workshop. Each piece is unique, sustainable, and built to last.</p>
+        <div class="business-info">
+          <strong>Bois Cr&eacute;ations SARL</strong><br>
+          Avenue Mohammed V<br>
+          Tangier 90000, Morocco<br>
+          RC: 12345 (Tangier)<br>
+          ICE: 001234567000089
+        </div>
+        <div style="margin-top: 16px; font-size: 0.85rem;">
+          <a href="mailto:contact@boiscreations.ma" style="display:block;margin-bottom:4px;">contact@boiscreations.ma</a>
+          <a href="tel:+212539000000" style="display:block;margin-bottom:4px;">+212 539 000 000</a>
+          <a href="https://wa.me/212661000000" style="display:block;color:#25d366;">WhatsApp: +212 661 000 000</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#products">All Products</a></li>
+          <li><a href="#products">Wall Clocks</a></li>
+          <li><a href="#products">Jewelry</a></li>
+          <li><a href="#products">Writing Pens</a></li>
+          <li><a href="#products">Home Decor</a></li>
+          <li><a href="#products">Accessories</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="refund-policy.html">Shipping Policy</a></li>
+          <li><a href="refund-policy.html">Returns &amp; Refunds</a></li>
+          <li><a href="refund-policy.html">Cancellation Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="refund-policy.html">Refund Policy</a></li>
+          <li><a href="refund-policy.html">Shipping Policy</a></li>
+        </ul>
+        <div class="social-links" style="margin-top: 24px;">
+          <a href="#" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/212661000000" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>&copy; 2026 Bois Cr&eacute;ations SARL. All rights reserved.</p>
+      <div class="payment-icons">
+        <span class="payment-icon">VISA</span>
+        <span class="payment-icon">Mastercard</span>
+        <span class="payment-icon">AMEX</span>
+        <span class="payment-icon">Discover</span>
+        <span class="payment-icon">Stripe</span>
+      </div>
+      <div class="security-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        SSL Secured &middot; PCI Compliant
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-inner">
+      <p>We use cookies to enhance your experience and analyze site traffic. By continuing, you agree to our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-of-service.html#cookies">Cookie Policy</a>.</p>
+      <div class="cookie-buttons">
+        <button class="cookie-accept" onclick="acceptCookies()">Accept All</button>
+        <button class="cookie-decline" onclick="declineCookies()">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/212661000000" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

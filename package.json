@@ -1,0 +1,14 @@
+{
+  "name": "bois-creations",
+  "version": "1.0.0",
+  "description": "Bois Creations - Handcrafted Wooden Goods E-Commerce",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "stripe": "^14.0.0"
+  }
+}

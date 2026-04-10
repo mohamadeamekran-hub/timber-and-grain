@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkout - Bois Cr&eacute;ations. Secure payment via Stripe.">
+  <title>Checkout | Bois Cr&eacute;ations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Bois <span>Cr&eacute;ations</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Shop</a>
+        <a href="index.html#about">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-icons">
+        <a href="#" class="cart-icon" aria-label="Cart" onclick="event.preventDefault();window.history.back();">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" style="display:none;">0</span>
+        </a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Open menu" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="toggleMobileMenu()" aria-label="Close menu">&times;</button>
+    <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+    <a href="index.html#products" onclick="toggleMobileMenu()">Shop</a>
+    <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
+  </div>
+
+  <!-- Checkout -->
+  <section class="checkout-page">
+    <div class="container">
+      <h2 class="section-title">Checkout</h2>
+      <p class="section-subtitle">All prices in MAD (Moroccan Dirham). Secure payment via Stripe.</p>
+    </div>
+
+    <div class="checkout-grid container">
+
+      <!-- Left: Shipping Info -->
+      <div>
+        <div class="checkout-section">
+          <h2><span class="step-num">1</span> Shipping Information</h2>
+          <form id="shippingForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="shippingFirst">First Name *</label>
+                <input type="text" id="shippingFirst" required placeholder="Your first name">
+              </div>
+              <div class="form-group">
+                <label for="shippingLast">Last Name *</label>
+                <input type="text" id="shippingLast" required placeholder="Your last name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="shippingEmail">Email Address *</label>
+              <input type="email" id="shippingEmail" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="shippingPhone">Phone Number *</label>
+              <input type="tel" id="shippingPhone" required placeholder="+212 ...">
+            </div>
+            <div class="form-group">
+              <label for="shippingAddress">Street Address *</label>
+              <input type="text" id="shippingAddress" required placeholder="123 Avenue Mohammed V">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="shippingCity">City *</label>
+                <input type="text" id="shippingCity" required placeholder="Tangier">
+              </div>
+              <div class="form-group">
+                <label for="shippingZip">Postal Code *</label>
+                <input type="text" id="shippingZip" required placeholder="90000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="shippingCountry">Country *</label>
+              <select id="shippingCountry" required>
+                <option value="MA" selected>Morocco</option>
+                <option value="FR">France</option>
+                <option value="ES">Spain</option>
+                <option value="DE">Germany</option>
+                <option value="GB">United Kingdom</option>
+                <option value="US">United States</option>
+                <option value="OTHER">Other</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <div class="checkout-section" style="margin-top: 24px;">
+          <h2><span class="step-num">2</span> Payment</h2>
+          <p style="color:var(--color-text-light);font-size:0.9rem;margin-bottom:16px;">
+            You will be redirected to Stripe's secure hosted checkout to complete your payment. We never see or store your card details.
+          </p>
+
+          <div class="secure-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Your payment info is encrypted and secure. All transactions use HTTPS/SSL and are PCI DSS compliant.</span>
+          </div>
+
+          <p style="font-size:0.85rem;color:var(--color-text-light);margin-bottom:4px;">Accepted payment methods:</p>
+          <div class="checkout-cards">
+            <span class="payment-icon">VISA</span>
+            <span class="payment-icon">Mastercard</span>
+            <span class="payment-icon">AMEX</span>
+            <span class="payment-icon">Discover</span>
+          </div>
+
+          <button class="stripe-checkout-btn" id="stripeCheckoutBtn" onclick="handleStripeCheckout()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Pay with Stripe
+          </button>
+
+          <p style="font-size:0.75rem;color:var(--color-text-light);text-align:center;margin-top:12px;">
+            By clicking "Pay with Stripe", you agree to our
+            <a href="terms-of-service.html" style="color:var(--color-accent);">Terms of Service</a> and
+            <a href="privacy-policy.html" style="color:var(--color-accent);">Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Order Summary -->
+      <div>
+        <div class="checkout-section">
+          <h2><span class="step-num">3</span> Order Summary</h2>
+          <div id="checkoutItems">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <div style="margin-top: 16px; padding: 16px; background: var(--color-surface); border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--color-text-light); line-height: 1.6;">
+          <strong style="color:var(--color-dark);">Shipping:</strong> Calculated based on your location. Free standard shipping within Morocco on orders over 1,000.00 MAD.<br>
+          <strong style="color:var(--color-dark);">International:</strong> Customs duties and import taxes (if applicable) are the buyer's responsibility.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer (compact for checkout) -->
+  <footer class="footer">
+    <div class="footer-bottom container" style="border-top:none;padding-top:0;">
+      <p>&copy; 2026 Bois Cr&eacute;ations SARL. All rights reserved.</p>
+      <div class="payment-icons">
+        <span class="payment-icon">VISA</span>
+        <span class="payment-icon">Mastercard</span>
+        <span class="payment-icon">AMEX</span>
+        <span class="payment-icon">Discover</span>
+        <span class="payment-icon">Stripe</span>
+      </div>
+      <div class="security-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        SSL Secured &middot; PCI Compliant
+      </div>
+    </div>
+    <div class="container" style="padding-bottom:24px;">
+      <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;font-size:0.8rem;">
+        <a href="privacy-policy.html" style="color:rgba(255,255,255,0.5);">Privacy Policy</a>
+        <a href="terms-of-service.html" style="color:rgba(255,255,255,0.5);">Terms of Service</a>
+        <a href="refund-policy.html" style="color:rgba(255,255,255,0.5);">Refund Policy</a>
+        <a href="refund-policy.html" style="color:rgba(255,255,255,0.5);">Shipping Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
